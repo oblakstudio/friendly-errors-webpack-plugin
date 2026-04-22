@@ -1,8 +1,7 @@
 # Friendly-errors-webpack-plugin
 
 [![npm](https://img.shields.io/npm/v/@soda/friendly-errors-webpack-plugin.svg)](https://www.npmjs.com/package/@soda/friendly-errors-webpack-plugin)
-[![Build Status](https://travis-ci.org/sodatea/friendly-errors-webpack-plugin.svg?branch=master)](https://travis-ci.org/sodatea/friendly-errors-webpack-plugin)
-[![Build status](https://ci.appveyor.com/api/projects/status/bbrt7hmp6lav3erh/branch/master?svg=true)](https://ci.appveyor.com/project/sodatea/friendly-errors-webpack-plugin/branch/master)
+[![CI](https://github.com/oblakstudio/friendly-errors-webpack-plugin/actions/workflows/test.yml/badge.svg)](https://github.com/oblakstudio/friendly-errors-webpack-plugin/actions/workflows/test.yml)
 
 Friendly-errors-webpack-plugin recognizes certain classes of webpack
 errors and cleans, aggregates and prioritizes them to provide a better
@@ -156,7 +155,23 @@ and [formatErrors](https://github.com/sodatea/friendly-errors-webpack-plugin/blo
 in the source code and take a look a the [default transformers](https://github.com/sodatea/friendly-errors-webpack-plugin/tree/master/src/transformers)
 and the [default formatters](https://github.com/sodatea/friendly-errors-webpack-plugin/tree/master/src/formatters).
 
-## TODO
+## Contributing
 
-- [x] Make it compatible with node 4
+This project uses [Conventional Commits](https://www.conventionalcommits.org/) and releases are cut automatically from `master` by [semantic-release](https://semantic-release.gitbook.io/). Every push to `master` whose commit history contains a release-triggering type publishes a new version to npm, commits an updated `CHANGELOG.md`, and tags the release.
+
+### Commit type → release bump
+
+| Commit type | Release bump |
+| --- | --- |
+| `feat` | minor |
+| `fix` | patch |
+| `perf` | patch |
+| `compat` | patch |
+| `refactor` | minor |
+| `style` | patch |
+| `chore` | none |
+| `docs`, `test`, `build`, `ci`, `revert` | none |
+| any type with a `BREAKING CHANGE:` footer | major |
+
+The authoritative configuration lives in [`.releaserc`](./.releaserc); the table above is a summary. When in doubt, open a PR with a `chore:` or `docs:` commit — those won't trigger a release.
 
