@@ -1,0 +1,7 @@
+{
+  "database": "dolt",
+  "backend": "dolt",
+  "dolt_mode": "embedded",
+  "dolt_database": "webpack",
+  "project_id": "268c812b-7fd6-469b-8cd2-fd8d2f9a1d68"
+}
