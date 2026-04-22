@@ -56,10 +56,11 @@ function successfulCompilationStats(opts) {
   const compilation = {
     errors: [],
     warnings: [],
-    children: []
+    children: [],
+    startTime: options.startTime,
+    endTime: options.endTime,
+    getErrors() { return this.errors; },
+    getWarnings() { return this.warnings; }
   };
-  const stats = new Stats(compilation);
-  stats.startTime = options.startTime;
-  stats.endTime = options.endTime;
-  return stats;
+  return new Stats(compilation);
 }

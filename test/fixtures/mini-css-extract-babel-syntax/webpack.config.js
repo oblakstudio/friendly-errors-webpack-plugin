@@ -3,6 +3,7 @@ const FriendlyErrorsWebpackPlugin = require('../../../index');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
+  mode: 'development',
   entry: __dirname + "/index.scss",
   output: {
     path: __dirname + "/dist",
@@ -20,8 +21,7 @@ module.exports = {
         test: /\.(s*)css$/,
         exclude: /node_modules/,
         use: [
-           MiniCssExtractPlugin.loader,
-          'style-loader',
+          MiniCssExtractPlugin.loader,
           'css-loader',
           {
             loader: 'sass-loader',
